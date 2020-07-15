@@ -1,0 +1,17 @@
+﻿@model Bookish.Web.Models.BookList
+@{
+    ViewBag.Title = "Browse";
+}
+<br/>
+@using(Html.BeginForm("Browse","Page",  new {searchFor = ""}, FormMethod.Get))
+ {
+     @Html.TextBoxFor(m => m.searchFor)
+     
+         <input type="submit" value="Search" />
+ }
+<div>
+    @foreach (var book in Model.books)
+    {
+        <div>@book</div>
+    }
+</div>

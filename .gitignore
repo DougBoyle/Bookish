@@ -4,3 +4,6 @@ Bookish.DataAccess/bin/
 Bookish.DataAccess/obj/
 Bookish.ConsoleApp/bin/
 Bookish.ConsoleApp/obj/
+Bookish.Web/bin/
+Bookish.Web/obj/
+*.csproj
