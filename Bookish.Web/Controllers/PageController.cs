@@ -7,8 +7,13 @@ namespace Bookish.Web.Controllers
     {
         public ActionResult Browse(string searchFor)
         {
-            var data = Bookish.DataAccess.DbQuery.getData(searchFor);
+            var data = Bookish.DataAccess.DbQuery.GetData(searchFor);
             return View("~/Views/Pages/Browse.cshtml", new BookList() {books = data, searchFor = ""});
         }
+
+     /*   public ActionResult SingleBook(int id)
+        {
+            var data = Bookish.DataAccess.DbQuery.GetHolders(id);
+        }*/
     }
 }
