@@ -16,7 +16,7 @@ namespace Bookish.DataAccess
 
         public override string ToString()
         {
-            return $"'{Title}' held by {Name} from {TakenOut.ToString("d")}, due {DueDate.ToString("d")}";
+            return $"Held by {Name} from {TakenOut.ToString("d")}, due {DueDate.ToString("d")}";
         }
     }
 }

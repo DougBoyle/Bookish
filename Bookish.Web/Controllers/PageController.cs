@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Runtime.ConstrainedExecution;
+using System.Web.Mvc;
+using Bookish.DataAccess;
 using Bookish.Web.Models;
 
 namespace Bookish.Web.Controllers
@@ -11,9 +14,11 @@ namespace Bookish.Web.Controllers
             return View("~/Views/Pages/Browse.cshtml", new BookList() {books = data, searchFor = ""});
         }
 
-     /*   public ActionResult SingleBook(int id)
+        public ActionResult SingleBook(Book book)
         {
-            var data = Bookish.DataAccess.DbQuery.GetHolders(id);
-        }*/
+            Console.WriteLine(book);
+            var data = Bookish.DataAccess.DbQuery.GetHolders(book.BookId);
+            return View("~/Views/Pages/SingleBook.cshtml", new BookStatus() {Book = book, Checkouts = data});
+        }
     }
 }

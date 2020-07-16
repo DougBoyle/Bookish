@@ -1,0 +1,13 @@
+﻿@model Bookish.Web.Models.BookStatus
+
+@{
+    ViewBag.Title = Model.Book.Title;
+}
+<br/>
+<div>@Model.Book</div>
+<div>
+    @foreach (var checkout in Model.Checkouts)
+    {
+        <div>@checkout</div>
+    }
+</div>
